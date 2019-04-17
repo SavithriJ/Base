@@ -1,1 +1,167 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body, html {
+    height: 100%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1.3em;
+    display: grid;
+    grid-template-columns: 30% auto;
+
+    a {
+        color: white;
+    }
+}
+
+section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+
+// ---------------------------owl-carousel ------------------------------------
+$designdashboard-imageContainer-bg: rgba(168,5,14,.3);
+$designdashboard-imageContainer-bg-hover: rgba(168,5,14,.1);
+$designdashboard-imageContainer-bg-active: rgba(168,5,14,.1);
+$designdashboard-imageContainer-bg-border: rgba(0, 0, 0, 0.5);
+
+
+.owl-carousel {
+  position: relative;
+  .owl-dot-active {
+   cursor: grabbing;
+  }
+  .owl-nav {
+
+    .owl-prev {
+      position: absolute;
+      font-size: 5rem !important;
+      left: -50px;
+      top: -30px;
+      height: 100%;
+    }
+
+    .owl-next {
+      position: absolute;
+      font-size: 5rem !important;
+      right: -50px;
+      top: -30px;
+      height: 100%;
+    }
+
+    [class*='owl-']:hover {
+      background-color: transparent;
+    }
+
+    [class*='owl-']:focus {
+      outline: none;
+    }
+  }
+
+  .owl-item {
+    padding: 0 5px;
+
+    img {
+      width: auto;
+      margin: 1.5rem 0 0;
+    }
+
+    .item {
+      position: relative;
+      > div {
+        background-color: $designdashboard-imageContainer-bg;
+        border: solid 1px $designdashboard-imageContainer-bg-border;
+        &:hover {
+          background-color: $designdashboard-imageContainer-bg-hover;
+        }
+      }
+
+      .link-tile {
+        display: block;
+        width: 100%;
+        border: solid 1px $designdashboard-imageContainer-bg-border;
+        background-color: $designdashboard-imageContainer-bg;
+        padding: .2rem;
+
+        .title {
+          width: 100%;
+          height: 59px;
+          display: flex;
+          flex-direction: column;
+          padding: 10px 0;
+          margin: 0;
+          font-weight: 400;
+          font-size: 1.1rem;
+          line-height: 22px;
+        }
+
+        &.activenode {
+          background-color: $designdashboard-imageContainer-bg-hover;
+        }
+      }
+
+      &.activenode {
+        > div {
+          background-color: $designdashboard-imageContainer-bg-hover;
+        }
+      }
+
+
+
+      .imageContainer {
+
+
+        :hover {
+        }
+      }
+
+      .imageContainer.activenode {
+        background-color: $designdashboard-imageContainer-bg-active;
+      }
+
+
+      .title {
+        font-weight: 400;
+        line-height: 15px;
+        color: #fff;
+        margin-top: 10px;
+        margin-bottom: 2rem;
+        font-size: 1rem;
+      }
+
+      .indicatorCon {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        .statusindicater ::before {
+          content: '|';
+          position: absolute;
+          font-size: 1.2rem;
+          top: 10px;
+          left: 0;
+        }
+      }
+    }
+  }
+
+
+}
+
+
